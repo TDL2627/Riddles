@@ -160,13 +160,11 @@ data(){
         },
         showResults() {
             this.index++
-            if(this.correctAnswer === 10){
-              this.message="PERFECTION"
+           
+           if(this.correctAnswer >=7){
+                this.message="PASS"
             }
-            if (this.correctAnswer >=7){
-                this.message="NOICE"
-            }
-            else(this.message="WEAK WACK")
+            else(this.message="FAIL")
         },
         resetQuiz() {
             this.index = 0
