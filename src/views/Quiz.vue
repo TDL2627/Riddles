@@ -1,10 +1,11 @@
 <template>
   <div class="quiz">
-      <h1>QUIZ</h1>
-      <div class="flex items-center justify-center w-full h-screen" id="app">
+              <router-link to="/">HOME</router-link> 
+
+      <div class="flex items-center justify-center w-full h-screen">
             <div class="w-full max-w-xl">
                 <h1 class="text-4xl font-bold text-center text-indigo-900">
-                    Python programming Questions
+                 Riddles
                 </h1>
                 <div class="w-full p-12 mt-8 bg-white rounded-lg shadow-lg">
                     <div v-if="index < count">
@@ -48,7 +49,9 @@
                         </div>
                     </div>
                     <div v-else>
+                        <div class="results">
                         <h2 class="text-3xl font-bold">Your Score Result</h2>
+                        <h3>{{message}}</h3>
                         <div class="flex justify-start mt-6 space-x-4">
                             <p>
                                 Correct Answers:
@@ -72,6 +75,7 @@
                             </button>
                         </div>
                     </div>
+                      </div>
                 </div>
             </div>
         </div>
@@ -83,25 +87,61 @@ export default {
 data(){
     return{
         index:0,
+        message:"",
         selectedAnswer: '',
             correctAnswer: 0,
             wrongAnswer: 0,
-            count: 3,
+            count: 10,
               questions: [
                 {
-                    question: "Q1. Who create python  language?",
-                    answers: {a: 'Guido van Rossum', b: 'Kristen Nygaard', c: 'Bjarne Stroustrup', d: 'Ole-Johan Dahl'},
-                    correctAnswer: 'a'
-                },
-                {
-                    question: "Q2. What does PEP stand for in python?",
-                    answers: {a: 'name of parentehes parameters', b: 'python english processing', c: 'Python Enhancement Proposal', d: 'PyPi'},
+                    question: "What has to be broken before you can use it?",
+                    answers: {a: 'A promise', b: 'A spaceship', c: 'An egg', d: 'A horse'},
                     correctAnswer: 'c'
                 },
                 {
-                    question: "Q3. What are python modules?",
-                    answers: {a: 'Are .py files with executable code', b: 'Python packages',c: 'Python list objects',d: 'Python packages'},
+                    question: "What month of the year has 28 days?",
+                    answers: {a: 'March', b: 'Febuary', c: 'October', d: 'All of them'},
+                    correctAnswer: 'd'
+                },
+                {
+                    question: "What is always in front of you but can not be seen?",
+                    answers: {a: 'Spectacles', b: 'Future',c: 'Ghosts',d: 'Nose'},
+                    correctAnswer: 'b'
+                },
+                  {
+                    question: "What can you break, even if you never pick it up or touch it?",
+                    answers: {a: 'Promise', b: 'Wind',c: 'Silence',d: 'Darkness'},
                     correctAnswer: 'a'
+                },
+                  {
+                    question: "What gets wet while drying?",
+                    answers: {a: 'Towel', b: 'Tears',c: 'Family',d: 'Darkness'},
+                    correctAnswer: 'a'
+                },
+                  {
+                    question: "What can you keep after giving to someone?",
+                    answers: {a: 'Your word', b: 'Family',c: 'Darkness',d: 'Money'},
+                    correctAnswer: 'a'
+                },
+                  {
+                    question: "I shave every day, but my beard stays the same. What am I?",
+                    answers: {a: 'Family', b: 'Eraser',c: 'Barber',d: 'Darkness'},
+                    correctAnswer: 'c'
+                },
+                  {
+                    question: "I have branches, but no fruit, trunk or leaves. What am I?",
+                    answers: {a: 'Tree', b: 'Darkness',c: 'Elephant',d: 'Bank'},
+                    correctAnswer: 'd'
+                },
+                  {
+                    question: "The more of this there is, the less you see. What is it?",
+                    answers: {a: 'Spectacles', b: 'Eyes',c: 'Family',d: 'Darkness'},
+                    correctAnswer: 'd'
+                },
+                  {
+                    question: "What has a head and a tail but no body?",
+                    answers: {a: 'Dinosaur', b: 'Coin',c: 'Ghosts',d: 'Family'},
+                    correctAnswer: 'b'
                 },
             ] 
     }
@@ -120,6 +160,13 @@ data(){
         },
         showResults() {
             this.index++
+            if(this.correctAnswer === 10){
+              this.message="PERFECTION"
+            }
+            if (this.correctAnswer >=7){
+                this.message="NOICE"
+            }
+            else(this.message="WEAK WACK")
         },
         resetQuiz() {
             this.index = 0
