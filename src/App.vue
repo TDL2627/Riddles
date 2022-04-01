@@ -13,6 +13,7 @@
     background:linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./assets/riddle.jpg");
     background-size: cover;
   height: 100vh;
+  overflow: hidden !important;
 }
 
 #nav {

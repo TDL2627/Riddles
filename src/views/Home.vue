@@ -1,11 +1,11 @@
 <template>
   <div class="home">
  
- <h1 class="mainHead">RIDDLE GAME</h1>
+ <h1 class="mainHead animate__animated  animate__bounceInDown">RIDDLE GAME</h1>
 
  <div id="nav">
     
-        <router-link to="/quiz"><h2 class="go">LETS GO</h2></router-link> 
+        <router-link to="/quiz"><h2 class="go animate__animated  animate__jackInTheBox animate__delay-2s ">LETS GO</h2></router-link> 
 
   </div>
   </div>
@@ -35,6 +35,7 @@ export default {
   margin-left: 25%;
   margin-top: 5%;
   padding: 20px;
+  overflow: hidden !important;
   width: 50%;
 }
 </style>
