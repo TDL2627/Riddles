@@ -51,7 +51,7 @@
                     <div v-else>
                         <div class="results">
                         <h2 class="text-3xl font-bold">Your Score Result</h2>
-                        <h3>{{message}}</h3>
+                       <div v-html="message"></div>
                         <div class="flex justify-start mt-6 space-x-4">
                             <p>
                                 Correct Answers:
@@ -162,9 +162,9 @@ data(){
             this.index++
            
            if(this.correctAnswer >=7){
-                this.message="PASS"
+                this.message=`<h1 style="color:green;">PASS</h1>`
             }
-            else(this.message="FAIL")
+            else(this.message=`<h1 style="color:red;">FAIL</h1>`)
         },
         resetQuiz() {
             this.index = 0
@@ -178,4 +178,4 @@ data(){
 
 <style scoped>
 
-</style>
+</style> 

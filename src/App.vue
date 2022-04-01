@@ -10,6 +10,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./assets/riddle.jpg");
+    background-size: cover;
+  height: 100vh;
 }
 
 #nav {
