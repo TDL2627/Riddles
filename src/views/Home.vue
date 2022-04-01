@@ -32,6 +32,9 @@ export default {
   background: white;
   color:  rgb(253, 81, 1);
   border-radius:25px ;
+  margin-left: 25%;
+  margin-top: 5%;
   padding: 20px;
+  width: 50%;
 }
 </style>
