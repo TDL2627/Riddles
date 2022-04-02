@@ -1,20 +1,20 @@
 <template>
   <div class="quiz">
-              <router-link to="/">HOME</router-link> 
+        
 
       <div class="flex items-center justify-center w-full h-screen">
             <div class="w-full max-w-xl">
-                <h1 class="text-4xl font-bold text-center text-indigo-900">
+                <h1 class="text-4xl font-bold text-center animate__animated animate__slow animate__zoomInDown">
                  Riddles
                 </h1>
-                <div class="w-full p-12 mt-8 bg-white rounded-lg shadow-lg">
+                <div class="quizzy w-full p-12 mt-8  rounded-lg shadow-lg">
                     <div v-if="index < count">
-                        <p class="text-2xl font-bold">
+                        <p class="text-2xl font-bold ques">
                             {{ questions[index]['question'] }}
                         </p>
                         <label
                             :for="key"
-                            class="block px-6 py-2 mt-4 text-lg border border-gray-300 rounded-lg"
+                            class="block px-6 py-2 mt-4 text-lg border border-gray-300 rounded-lg bg-white"
                             v-for="answer,key in questions[index]['answers']" 
                             :class="{'hover:bg-gray-100 cursor-pointer' : selectedAnswer == ''},
                         {'bg-red-100 border border-20 border-red-400' : selectedAnswer == key},
@@ -33,7 +33,7 @@
                         </label>
                         <div class="flow-root mt-6">
                             <button
-                                class="float-right px-5 py-2 text-sm font-bold tracking-wide text-white bg-indigo-900 rounded-full"
+                                class="float-right px-5 py-2 text-sm font-bold tracking-wide text-white nexy rounded-full"
                                 v-show="selectedAnswer != '' && index < count-1"
                                 @click="nextQuestion"
                             >
@@ -182,5 +182,27 @@ data(){
     background-size: cover;
   height: 100vh;
   overflow-y: hidden !important;
+}h1{
+      color:  rgb(253, 81, 1);
+}
+.nexy{
+    background-color: rgb(253, 81, 1) ;
+}
+.quizzy{
+    background: rgba( 253, 114, 0, 0.6 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.ques{
+    color:whitesmoke !important;
+}
+@media only screen and (max-width:700px) {
+    .quiz{
+       padding-left: 5%;
+       padding-right: 5%;
+    }
 }
 </style> 
