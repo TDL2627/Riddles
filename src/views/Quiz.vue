@@ -17,8 +17,8 @@
                             class="block px-6 py-2 mt-4 text-lg border border-gray-300 rounded-lg bg-white"
                             v-for="answer,key in questions[index]['answers']" 
                             :class="{'hover:bg-gray-100 cursor-pointer' : selectedAnswer == ''},
-                        {'bg-red-100 border border-20 border-red-400' : selectedAnswer == key},
-                        {'bg-green-100  border border-10 border-green-400' : key == questions[index]['correctAnswer'] && selectedAnswer != ''}"
+                        {'bg-red-300 border border-20 border-red-400' : selectedAnswer == key},
+                        {'bg-green-300  border border-10 border-green-400' : key == questions[index]['correctAnswer'] && selectedAnswer != ''}"
                         >
                             <input
                                 type="radio"
@@ -187,6 +187,7 @@ data(){
 }
 .nexy{
     background-color: rgb(253, 81, 1) ;
+    border: solid 2px white;
 }
 .quizzy{
     background: rgba( 253, 114, 0, 0.6 );
