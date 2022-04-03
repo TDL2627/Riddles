@@ -199,6 +199,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .ques{
     color:whitesmoke !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 @media only screen and (max-width:700px) {
     .quiz{

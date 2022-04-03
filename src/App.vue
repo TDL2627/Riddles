@@ -4,6 +4,7 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +16,9 @@
   height: 100vh;
   overflow: hidden !important;
 }
-
+*{
+  font-family: 'Lobster', cursive;
+}
 
 .vibrate-1 {
 	-webkit-animation: vibrate-1 1s linear 2s infinite both;

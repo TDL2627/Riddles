@@ -7,7 +7,7 @@
  <div id="nav">
         <router-link to="/quiz"><h2  class="go animate__animated  animate__jackInTheBox animate__delay-2s ">LETS GO</h2></router-link> 
   </div>
-  
+  <h1 class="creator animate__animated animate__hinge animate__delay-3s animate__slower">TDL2627</h1>
   </div>
 </template>
 
@@ -20,6 +20,7 @@ export default {
 }
 </script>
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Rubik+Glitch&display=swap');
 .home{
   padding-top: 15%;
 }
@@ -27,6 +28,13 @@ export default {
   color: whitesmoke;
   font-size: 100px;
 }
+.creator{
+  color: red;
+  font-size: 70px;
+  margin-top:5%;
+font-family: 'Rubik Glitch', cursive;
+}
+
 .headline{
   animation-name: vibrate-1;
   animation-duration: 1s;
@@ -57,6 +65,10 @@ export default {
   }
 .go{
   margin-top: 40%;
+}
+.creator{
+      font-size: 40px;
+
 }
 }
 </style>
