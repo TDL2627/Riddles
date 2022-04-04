@@ -33,14 +33,14 @@
                         </label>
                         <div class="flow-root mt-6">
                             <button
-                                class="float-right px-5 py-2 text-sm font-bold tracking-wide text-white nexy rounded-full"
+                                class="float-right px-5 py-2 text-sm font-bold tracking-wide text-white nexy rounded-full butz"
                                 v-show="selectedAnswer != '' && index < count-1"
                                 @click="nextQuestion"
                             >
                                 Next Question &gt;
                             </button>
                             <button
-                                class="float-right px-5 py-2 text-sm font-bold tracking-wide text-white bg-indigo-900 rounded-full"
+                                class="float-right px-5 py-2 text-sm font-bold tracking-wide text-white nexy rounded-full"
                                 v-show="selectedAnswer != '' && index == count-1"
                                 @click="showResults"
                             >
@@ -51,7 +51,7 @@
                     <div v-else>
                         <div class="results">
                         <h2 class="text-3xl font-bold">Your Score Result</h2>
-                       <div v-html="message"></div>
+                       <div class="mess" v-html="message"></div>
                         <div class="flex justify-start mt-6 space-x-4">
                             <p>
                                 Correct Answers:
@@ -162,9 +162,14 @@ data(){
             this.index++
            
            if(this.correctAnswer >=7){
-                this.message=`<h1 style="color:green;">PASS</h1>`
+                this.message=`<div class="pass">
+                <h1 style="color:green;">WELL DONE!!</h1>
+                </div>`
             }
-            else(this.message=`<h1 style="color:red;">FAIL</h1>`)
+            else(this.message=`<div class="fail">
+            <h1 style="color:red;">SO SAD</h1>
+            </div>
+            `)
         },
         resetQuiz() {
             this.index = 0
@@ -182,12 +187,25 @@ data(){
     background-size: cover;
   height: 100vh;
   overflow-y: hidden !important;
+  overflow: hidden !important;
+  width: 100%;
 }h1{
       color:  rgb(253, 81, 1);
 }
 .nexy{
     background-color: rgb(253, 81, 1) ;
     border: solid 2px white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nexy:hover{
+    background-color: white ;
+    border: solid 2px rgb(253, 81, 1);
+    color: rgb(253, 81, 1);
+}
+
+
+.mess{
+ font-size:20px
 }
 .quizzy{
     background: rgba( 253, 114, 0, 0.6 );
@@ -197,10 +215,14 @@ backdrop-filter: blur( 4px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-.ques{
-    color:whitesmoke !important;
+label{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.ques{
+    color:whitesmoke !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+}
+
 @media only screen and (max-width:700px) {
     .quiz{
        padding-left: 5%;
