@@ -91,7 +91,7 @@ data(){
         selectedAnswer: '',
             correctAnswer: 0,
             wrongAnswer: 0,
-            count: 10,
+            count: 20,
               questions: [
                 {
                     question: "What has to be broken before you can use it?",
@@ -143,6 +143,56 @@ data(){
                     answers: {a: 'Dinosaur', b: 'Coin',c: 'Ghosts',d: 'Family'},
                     correctAnswer: 'b'
                 },
+                  {
+                    question: "Im quick when Im thin and slow when Im fat?",
+                    answers: {a: 'Athlete', b: 'Candle',c: 'Sonic',d: 'Family'},
+                    correctAnswer: 'b'
+                },
+                  {
+                    question: "I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. What am I? ",
+                    answers: {a: 'World', b: 'Games',c: 'Towers',d: 'Map'},
+                    correctAnswer: 'd'
+                },
+                  {
+                    question: "What is seen in the middle of March and April that cant be seen at the beginning or end of either month?",
+                    answers: {a: 'R', b: 'March',c: 'April',d: 'May'},
+                    correctAnswer: 'a'
+                },
+                  {
+                    question: "I come from a mine and get surrounded by wood always. Everyone uses me. What am I? ",
+                    answers: {a: 'Bread', b: 'Coffin',c: 'Pencil',d: 'Bark'},
+                    correctAnswer: 'c'
+                },
+                  {
+                    question: "What disappears as soon as you say its name?",
+                    answers: {a: 'IT', b: 'Silence',c: 'Ghosts',d: 'Money'},
+                    correctAnswer: 'b'
+                },
+                  {
+                    question: "How can the number four be half of five?",
+                    answers: {a: 'VI', b: '9',c: 'IV',d: 'VII'},
+                    correctAnswer: 'c'
+                },
+                  {
+                    question: "I have keys, but no locks and space, and no rooms. You can enter, but you cant go outside. What am I?",
+                    answers: {a: 'Prison', b: 'Company',c: 'Keyboard',d: 'Library'},
+                    correctAnswer: 'c'
+                },
+                  {
+                    question: "How many letters are in the alphabet?",
+                    answers: {a: '27', b: '26',c: '29',d: '11'},
+                    correctAnswer: 'd'
+                },
+                  {
+                    question: "This belongs to you, but everyone else uses it.",
+                    answers: {a: 'Money', b: 'Name',c: 'Toilet',d: 'Car'},
+                    correctAnswer: 'b'
+                },
+                  {
+                    question: "First, think of the color of the clouds. Next, think of the color of snow. Now, think of the color of a bright full moon. Now answer quickly what do cows drink?",
+                    answers: {a: 'Milk', b: 'White',c: 'Grass',d: 'Water'},
+                    correctAnswer: 'd'
+                },
             ] 
     }
 },
@@ -161,7 +211,7 @@ data(){
         showResults() {
             this.index++
            
-           if(this.correctAnswer >=7){
+           if(this.correctAnswer >=12){
                 this.message=`<div class="pass">
                 <h1 style="color:green;">WELL DONE!!</h1>
                 </div>`
